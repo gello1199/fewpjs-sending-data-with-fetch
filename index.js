@@ -14,9 +14,12 @@ function submitData(name, email) {
         return response.json();
     })
     .then(function(object) {
-        console.log(object);
+        document.body.innerHTML = object.id
+        debugger;
+        // console.log(object.id);
     })
     .catch(function(error) {
+        document.body.innerHTML = error.message
         alert(error.message);
         console.log(error.message);
     })
